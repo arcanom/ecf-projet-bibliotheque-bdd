@@ -1,0 +1,3 @@
+-- Création de l'utilisateur admin et de la base de données library --
+CREATE USER 'admin'@'%' IDENTIFIED WITH mysql_native_password BY '123';GRANT USAGE ON *.* TO 'admin'@'%';ALTER USER 'admin'@'%' REQUIRE NONE WITH MAX_QUERIES_PER_HOUR 0 MAX_CONNECTIONS_PER_HOUR 0 MAX_UPDATES_PER_HOUR 0 MAX_USER_CONNECTIONS 0;
+CREATE DATABASE IF NOT EXISTS `library`;GRANT ALL PRIVILEGES ON `library`.* TO 'admin'@'%';
